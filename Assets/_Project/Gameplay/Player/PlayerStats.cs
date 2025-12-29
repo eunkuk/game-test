@@ -36,10 +36,14 @@ namespace Game.Gameplay.Player
         }
 
         /// <summary>
-        /// Encounter 결과 적용
+        /// Encounter 결과 적용 (GameEvents는 object 타입 사용)
         /// </summary>
-        private void OnEncounterResolved(Game.Systems.Encounter.EncounterResult result)
+        private void OnEncounterResolved(object obj)
         {
+            // GameEvents가 object 타입을 사용하므로 캐스팅 필요
+            var result = obj as Game.Systems.Encounter.EncounterResult;
+            if (result == null) return;
+
             if (result.HealthChange != 0)
             {
                 ChangeHealth(result.HealthChange);

@@ -1,0 +1,57 @@
+{
+  "version": "1.0",
+  "monsters": [
+    {
+      "id": "goblin_scout",
+      "displayName": "Goblin Scout",
+      "archetype": "Melee",
+      "prefabPath": "Prefabs/Enemies/Goblin",
+      "stats": {
+        "maxHealth": 30,
+        "moveSpeed": 2.5,
+        "attackDamage": 5,
+        "attackRange": 1.0,
+        "detectionRange": 6.0,
+        "attackCooldown": 1.5
+      },
+      "ai": {
+        "behavior": "Patrol",
+        "aggroRadius": 7.0,
+        "chaseSpeed": 3.5,
+        "giveUpTime": 5.0
+      },
+      "loot": {
+        "goldMin": 5,
+        "goldMax": 15,
+        "dropChance": 0.3,
+        "itemPool": ["health_potion_small"]
+      }
+    },
+    {
+      "id": "skeleton_warrior",
+      "displayName": "Skeleton Warrior",
+      "archetype": "Melee",
+      "prefabPath": "Prefabs/Enemies/Skeleton",
+      "stats": {
+        "maxHealth": 50,
+        "moveSpeed": 1.8,
+        "attackDamage": 10,
+        "attackRange": 1.5,
+        "detectionRange": 8.0,
+        "attackCooldown": 2.0
+      },
+      "ai": {
+        "behavior": "Aggressive",
+        "aggroRadius": 10.0,
+        "chaseSpeed": 2.5,
+        "giveUpTime": 10.0
+      },
+      "loot": {
+        "goldMin": 10,
+        "goldMax": 25,
+        "dropChance": 0.5,
+        "itemPool": ["health_potion_medium", "rusty_sword"]
+      }
+    }
+  ]
+}

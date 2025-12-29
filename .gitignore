@@ -1,6 +1,7 @@
 # IDE
 .idea/
 .vscode/
+.claude/
 
 # Unity
 [Ll]ibrary/

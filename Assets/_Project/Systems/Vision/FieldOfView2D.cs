@@ -170,8 +170,8 @@ namespace Game.Systems.Vision
                 float leftAngle = (facingAngle - viewAngle / 2f) * Mathf.Deg2Rad;
                 float rightAngle = (facingAngle + viewAngle / 2f) * Mathf.Deg2Rad;
 
-                Vector3 leftDir = new Vector3(Mathf.Cos(leftAngle), Mathf.Sin(leftAngle), 0) * viewDistance;
-                Vector3 rightDir = new Vector3(Mathf.Cos(rightAngle), Mathf.Sin(rightAngle), 0) * viewDistance;
+                Vector2 leftDir = new Vector2(Mathf.Cos(leftAngle), Mathf.Sin(leftAngle)) * viewDistance;
+                Vector2 rightDir = new Vector2(Mathf.Cos(rightAngle), Mathf.Sin(rightAngle)) * viewDistance;
 
                 Gizmos.DrawLine(origin, origin + leftDir);
                 Gizmos.DrawLine(origin, origin + rightDir);

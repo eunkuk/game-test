@@ -3,21 +3,21 @@
   "monsters": [
     {
       "id": "goblin_scout",
-      "displayName": "Goblin Scout",
+      "displayName": "고블린 정찰병",
       "archetype": "Melee",
-      "prefabPath": "Prefabs/Enemies/Goblin",
+      "prefabPath": "Prefabs/Enemies/Enemy_Goblin",
       "stats": {
         "maxHealth": 30,
-        "moveSpeed": 2.5,
+        "moveSpeed": 2.0,
         "attackDamage": 5,
-        "attackRange": 1.0,
+        "attackRange": 1.2,
         "detectionRange": 6.0,
         "attackCooldown": 1.5
       },
       "ai": {
         "behavior": "Patrol",
         "aggroRadius": 7.0,
-        "chaseSpeed": 3.5,
+        "chaseSpeed": 3.0,
         "giveUpTime": 5.0
       },
       "loot": {
@@ -29,12 +29,12 @@
     },
     {
       "id": "skeleton_warrior",
-      "displayName": "Skeleton Warrior",
+      "displayName": "해골 전사",
       "archetype": "Melee",
-      "prefabPath": "Prefabs/Enemies/Skeleton",
+      "prefabPath": "Prefabs/Enemies/Enemy_Skeleton",
       "stats": {
         "maxHealth": 50,
-        "moveSpeed": 1.8,
+        "moveSpeed": 1.5,
         "attackDamage": 10,
         "attackRange": 1.5,
         "detectionRange": 8.0,
@@ -44,13 +44,39 @@
         "behavior": "Aggressive",
         "aggroRadius": 10.0,
         "chaseSpeed": 2.5,
-        "giveUpTime": 10.0
+        "giveUpTime": 8.0
       },
       "loot": {
         "goldMin": 10,
         "goldMax": 25,
         "dropChance": 0.5,
         "itemPool": ["health_potion_medium", "rusty_sword"]
+      }
+    },
+    {
+      "id": "dark_mage",
+      "displayName": "어둠의 마법사",
+      "archetype": "Ranged",
+      "prefabPath": "Prefabs/Enemies/Enemy_Mage",
+      "stats": {
+        "maxHealth": 25,
+        "moveSpeed": 1.8,
+        "attackDamage": 15,
+        "attackRange": 5.0,
+        "detectionRange": 10.0,
+        "attackCooldown": 3.0
+      },
+      "ai": {
+        "behavior": "Defensive",
+        "aggroRadius": 12.0,
+        "chaseSpeed": 2.0,
+        "giveUpTime": 3.0
+      },
+      "loot": {
+        "goldMin": 20,
+        "goldMax": 40,
+        "dropChance": 0.7,
+        "itemPool": ["mana_potion", "magic_staff"]
       }
     }
   ]

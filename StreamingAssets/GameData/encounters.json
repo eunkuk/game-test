@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "encounters": [
+    {
+      "id": "spike_trap",
+      "type": "Trap",
+      "displayName": "가시 함정",
+      "description": "바닥에서 숨겨진 가시가 튀어나온다!",
+      "trapType": "Damage",
+      "damageAmount": 15,
+      "duration": 0
+    },
+    {
+      "id": "poison_gas",
+      "type": "Trap",
+      "displayName": "독가스 함정",
+      "description": "복도에 독성 가스가 가득 퍼진다!",
+      "trapType": "Poison",
+      "damageAmount": 5,
+      "duration": 10.0
+    },
+    {
+      "id": "treasure_chest",
+      "type": "Loot",
+      "displayName": "보물 상자",
+      "description": "먼지 쌓인 상자 안에 금화가 가득하다!",
+      "goldAmount": 50,
+      "itemReward": null
+    },
+    {
+      "id": "healing_fountain",
+      "type": "Loot",
+      "displayName": "치유의 샘",
+      "description": "마법의 샘물이 체력을 회복시켜준다.",
+      "goldAmount": 0,
+      "healthRestore": 30
+    },
+    {
+      "id": "mysterious_statue",
+      "type": "EventText",
+      "displayName": "신비한 석상",
+      "description": "석상이 두 손을 내밀고 있다. 한 손은 붉게, 다른 손은 푸르게 빛난다.",
+      "choices": [
+        {
+          "text": "붉은 손을 만진다",
+          "result": "석상이 무너지며 안에서 금화가 쏟아진다!",
+          "goldReward": 30,
+          "healthPenalty": 0
+        },
+        {
+          "text": "푸른 손을 만진다",
+          "result": "치유의 빛이 당신을 감싼다.",
+          "goldReward": 0,
+          "healthRestore": 20
+        },
+        {
+          "text": "그냥 지나친다",
+          "result": "조심스럽게 걸어간다.",
+          "goldReward": 0,
+          "healthPenalty": 0
+        }
+      ]
+    }
+  ]
+}

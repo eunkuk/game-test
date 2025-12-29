@@ -1,0 +1,20 @@
+{
+    "name": "Game.Runtime",
+    "rootNamespace": "Game.Runtime",
+    "references": [
+        "Game.Core",
+        "Game.Data",
+        "Game.Systems",
+        "Game.Gameplay",
+        "Game.UI"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
